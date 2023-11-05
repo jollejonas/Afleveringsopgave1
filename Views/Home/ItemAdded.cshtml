@@ -1,0 +1,19 @@
+﻿@model Afleveringsopgave.Models.ShoppingList
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Vare tilføjet</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+</head>
+<body class="text-center">
+    <div>
+        <h1>Sådan din vare, @Model?.Item er tilføjet til indkøbslisten</h1>
+    </div>
+    Klik
+    <a asp-action="ListItems">her</a> for at se din indkøbskurv.
+</body>
+</html>

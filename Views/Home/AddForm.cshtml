@@ -1,0 +1,41 @@
+﻿@model Afleveringsopgave.Models.ShoppingList
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Tilføj Vare</title>
+    <link rel="stylesheet" href="/lib/bootstrap/dist/css/bootstrap.css" />
+    <link rel="stylesheet" href="/css/styles.css" />
+</head>
+<body>
+    <h5 class="bg-primary text-white text-center m-2 p-2">Tilføj Vare</h5>
+    <form asp-action="AddForm" method="post" class="m-2">
+        <div asp-validation-summary="All"></div>
+        <div class="form-group">
+            <label asp-for="Item" class="form-label">Varenavn:</label>
+            <input asp-for="Item" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Amount" class="form-label">Antal:</label>
+            <input asp-for="Amount" class="form-control" />
+        </div>
+        <div class="form-group">
+            <label asp-for="Location" class="form-label" />
+            <select asp-for="Location" class="form-select">
+                <option value="">Vælg en afdeling</option>
+                <option value="Frugt og grønt">Frugt og grønt</option>
+                <option value="Mejeri">Mejeri</option>
+                <option value="Brød">Brød</option>
+                <option value="Konserves">Konserves</option>
+                <option value="Frost">Frost</option>
+            </select>
+        </div>
+        <button type="submit" class="btn btn-primary mt-3">
+            Tilføj Vare
+        </button>
+    </form>
+</body>
+</html>
